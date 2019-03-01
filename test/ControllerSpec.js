@@ -209,12 +209,12 @@ describe('controller', function () {
     });
 
     it('should set the "clear completed" button', function () {
-        var todo = {
+        var todo = [{
             id: 42,
             title: 'my todo',
             completed: true
-        };
-        setUpModel([todo]);
+        }];
+        setUpModel(todo);
 
         subject.setView('');
 
@@ -448,6 +448,9 @@ describe('controller', function () {
             //Model.prototype.remove = function (id, callback)
 
             expect(model.remove).toHaveBeenCalledWith(0, jasmine.any(Function));
+
+            expect(model.remove).not.toHaveBeenCalledWith(1, jasmine.any(Function));
+
         });
 
         it('should remove an entry from the view', function () {
