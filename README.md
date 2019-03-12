@@ -79,8 +79,6 @@ Dans le dossier test vous trouverez le fichier **SpecRunner.html** qui va vous p
 >* #61 : Test si le model et le view sont bien affichés
 ```javascript
 it('should show entries on start-up', function () {
-        // TODO: write test
-
         var todo = [{
                 id: 0,
                 title: 'TodoNumber1',
@@ -103,8 +101,6 @@ it('should show entries on start-up', function () {
 >* #107 : Test du rendu de view lors de l'affichage des todos avec le filtre "active"
 ```javascript
 it('should show active entries', function () {
-            // TODO: write test
-
             var todo = [{
                     id: 0,
                     title: 'TodoNumber1',
@@ -137,7 +133,6 @@ it('should show active entries', function () {
   >* #138 : Test du rendu de view lors de l'affichage des todos avec le filtre "completed"
   ```javascript
 it('should show completed entries', function () {
-            // TODO: write test
             var todo = [{
                     id: 0,
                     title: 'TodoNumber1',
@@ -175,8 +170,6 @@ it('should show completed entries', function () {
    >* #225 : Test si "All" est encadré lorsque l'on a le filtre par défaut
 ```javascript   
 it('should highlight "All" filter by default', function () {
-    // TODO: write test
-
     var todo = [{
             id: 0,
             title: 'TodoNumber1',
@@ -196,7 +189,189 @@ it('should highlight "All" filter by default', function () {
 
     expect(view.render).toHaveBeenCalledWith('setFilter', '');
 });
-
 ```
-              
-  
+
+>* #250 : Test si "Active" est encadré lorsque l'on a le filtre "Active"
+```javascript
+it('should highlight "Active" filter when switching to active view', function () {
+        var todo = [{
+                id: 0,
+                title: 'TodoNumber1',
+                completed: true
+        },
+            {
+                id: 1,
+                title: 'TodoNumber2',
+                completed: false
+                    }];
+
+        setUpModel(todo);
+
+        subject.setView('#/active'); //controler.js
+
+        //detection si le filtre a bien été passé avec le paramètre 'active'
+
+        expect(view.render).toHaveBeenCalledWith('setFilter', 'active');
+
+        //detection si il y a que des todos 'completed : false' qui sont affichées
+
+        expect(model.read).toHaveBeenCalledWith({
+            completed: false
+        }, jasmine.any(Function));
+
+        expect(model.read).not.toHaveBeenCalledWith({
+            completed: true
+        }, jasmine.any(Function));
+    });
+```     
+
+>* #284 : Test de l'update du model quand toutes les todos sont passées à "toggle"
+
+```javascript
+    it('should toggle all todos to completed', function () {
+        var todo = [{
+                    id: 0,
+                    title: 'TodoNumber1',
+                    completed: false
+            },
+                {
+                    id: 1,
+                    title: 'TodoNumber2',
+                    completed: false
+                        }];
+
+            setUpModel(todo);
+
+            subject.setView('');
+
+            //Appel de la fonction 'toggleAll' avec le parametre 'completed : true'
+
+            view.trigger('toggleAll', {
+                completed: true
+            });
+
+            //detection si les modifications ont bien été faites
+
+            //Model.prototype.update = function (id, data, callback)
+
+            expect(model.update).toHaveBeenCalledWith(0, {
+                completed: true
+            }, jasmine.any(Function));
+
+            expect(model.update).toHaveBeenCalledWith(1, {
+                completed: true
+            }, jasmine.any(Function));
+
+
+        });
+```
+>* #322 : Test de la mise à jour de "View"
+
+```javascript
+it('should update the view', function () {
+            var todo = [{
+                    id: 0,
+                    title: 'TodoNumber1',
+                    completed: false
+            },
+                {
+                    id: 1,
+                    title: 'TodoNumber2',
+                    completed: false
+                        }];
+
+            setUpModel(todo);
+
+            subject.setView(''); //controler.js
+
+            //Appel de la fonction 'toggleAll' avec le parametre 'completed : true'
+
+            view.trigger('toggleAll', {
+                completed: true
+            });
+
+            //detection si les elements sont bien affichés 'completed : true'
+
+            //self._elementComplete(parameter.id, parameter.completed)
+
+            expect(view.render).toHaveBeenCalledWith('elementComplete', {
+                id: 0,
+                completed: true
+            });
+
+            expect(view.render).toHaveBeenCalledWith('elementComplete', {
+                id: 1,
+                completed: true
+            });
+        });
+```
+
+>* #363 : Test si "model" créé bien une nouvelle todo
+
+```javascript
+it('should add a new todo to the model', function () {
+            var todo = [{
+                id: 0,
+                title: 'TodoNumber1',
+                completed: false
+            }];
+
+            setUpModel(todo);
+
+            subject.setView(''); //controler.js
+
+            //Appel de la fonction 'newTodo' avec le parametre 'addNewTodo'
+
+            view.trigger('newTodo', 'addNewTodo');
+
+            //detection si l'element 'addNewTodo' a bien créé
+
+            expect(model.create).toHaveBeenCalledWith('addNewTodo', jasmine.any(Function));
+
+        });
+```
+
+>* #422 : Test sur le model lors de la suppression d'une todo
+```javascript
+it('should remove an entry from the model', function () {
+            var todo = [{
+                    id: 0,
+                    title: 'TodoNumber1',
+                    completed: true
+            },
+                {
+                    id: 1,
+                    title: 'TodoNumber2',
+                    completed: false
+                        }];
+
+            setUpModel(todo);
+
+            subject.setView(''); //controler.js
+
+            //Appel de la fonction 'itemRemove' avec le parametre 'id : 0'
+
+            view.trigger('itemRemove', {
+                id: 0
+            });
+
+            //detection si l'element '0' a bien été supprimé
+
+            //Model.prototype.remove = function (id, callback)
+
+            expect(model.remove).toHaveBeenCalledWith(0, jasmine.any(Function));
+
+            expect(model.remove).not.toHaveBeenCalledWith(1, jasmine.any(Function));
+
+        });
+```
+
+## 3. Optimisez la performance
+
+* Création d'un audit de performance pour le site [todolistme](http://todolistme.net/)
+
+## 4. Améliorez le projet
+* Création d'une documentation utilisateur
+
+* Création d'une documentation technique 
+
