@@ -9,4 +9,3 @@
 * Il vous suffit ensuite d'appuyer sur la touche "entrée" de votre claiver pour valider et enregistrer la todo
 
 * Votre todo s'affiche automatiquement dans la liste :
-
