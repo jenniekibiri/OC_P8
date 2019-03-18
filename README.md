@@ -373,5 +373,5 @@ it('should remove an entry from the model', function () {
 ## 4. Améliorez le projet
 * Création d'une  [documentation utilisateur](https://github.com/thomasv04/OC_P8/blob/master/doc/doc_util.md)
 
-* Création d'une documentation technique 
+* Création d'une  [documentation technique](http://thomas-vigneron.fr/todo/jsdoc/index.html)
 
