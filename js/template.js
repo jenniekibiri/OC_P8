@@ -1,5 +1,4 @@
 /*jshint laxbreak:true */
-(function (window) {
 	'use strict';
 
 	var htmlEscapes = {
@@ -94,12 +93,7 @@
 		return '<strong>' + activeTodos + '</strong> item' + plural + ' left';
 	};
 
-	/**
-	 * Updates the text within the "Clear completed" button
-	 *
-	 * @param  {[type]} completedTodos The number of completed todos.
-	 * @returns {string} String containing the count
-	 */
+	
 	Template.prototype.clearCompletedButton = function (completedTodos) {
 		if (completedTodos > 0) {
 			return 'Clear completed';
@@ -111,4 +105,3 @@
 	// Export to window
 	window.app = window.app || {};
 	window.app.Template = Template;
-})(window);
