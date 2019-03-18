@@ -25,3 +25,16 @@ Plusieurs éléments sont apparus lors de l'ajout de la Todo :
 * Pour pouvoir modifier une todo, rien de plus simple, il vous suffit de doubler-cliquer sur la todo en question.
 * Ensuite comme lors de la création, un clique sur "entrée" vide le tout.
 * Pour annuler, il faut appuyer sur le bouton "echap"
+
+![Todo4](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/4.png)
+
+## La complession d'une todo : 
+
+* Pour signaler que vous avez complété une todo, il vous suffit de cliquer sur le cercle gris à gauche de la todo :
+
+![Todo5](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/5.png)
+
+* Lors de la complession de cette todo, celle-ci est barrée et un nouveau bouton "Clear completed" apparait. Il sert à supprimer d'un clique toutes les totos "cochées"
+
+## Le filtre :
+
