@@ -371,7 +371,7 @@ it('should remove an entry from the model', function () {
 * Création d'un audit de performance pour le site [todolistme](http://todolistme.net/)
 
 ## 4. Améliorez le projet
-* Création d'une  [documentation utilisateur](https://github.com/thomasv04/OC_P8/blob/master/doc/doc_util.md)
+* Création d'une  [documentation utilisateur](https://github.com/thomasv04/OC_P8/blob/master/documentation/doc_util.md)
 
 * Création d'une  [documentation technique](http://thomas-vigneron.fr/todo/jsdoc/index.html)
 
