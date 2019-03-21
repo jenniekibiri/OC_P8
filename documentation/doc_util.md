@@ -23,8 +23,9 @@ Plusieurs éléments sont apparus lors de l'ajout de la Todo :
 ## Modification d'une todo : 
 
 * Pour pouvoir modifier une todo, rien de plus simple, il vous suffit de doubler-cliquer sur la todo en question.
-* Ensuite comme lors de la création, un clique sur "entrée" vide le tout.
+* Ensuite comme lors de la création, un clique sur "entrée" valide le tout.
 * Pour annuler, il faut appuyer sur le bouton "echap"
+* Si vous supprimez tout le texte et validez, cela supprimera la todo.
 
 ![Todo4](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/4.png)
 
