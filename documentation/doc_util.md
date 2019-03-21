@@ -17,8 +17,8 @@
 ![Todo3](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/3.png)
 
 Plusieurs éléments sont apparus lors de l'ajout de la Todo :
-* Une zone en bas de la todo comprenant le nombre de todo et un filtre
-* Une flèche à gauche de "what needs to be done ?"
+* Une zone en bas de la todo comprenant le nombre de todo non "cochées" 
+* Un filtre
 
 ## Modification d'une todo : 
 
