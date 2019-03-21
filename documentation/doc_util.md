@@ -39,3 +39,6 @@ Plusieurs éléments sont apparus lors de l'ajout de la Todo :
 ## Le filtre :
 
 
+Lors de l'ajout d'au moins une todo, les trois boutons : "all", "active" et "completed" s'affichent. S'est trois boutons servent de filtre.
+
+Pour comprendre comment il fonctionne nous allons créer 5 todos et en "cocher" 3 : 
