@@ -42,3 +42,14 @@ Plusieurs éléments sont apparus lors de l'ajout de la Todo :
 Lors de l'ajout d'au moins une todo, les trois boutons : "all", "active" et "completed" s'affichent. S'est trois boutons servent de filtre.
 
 Pour comprendre comment il fonctionne nous allons créer 5 todos et en "cocher" 3 : 
+
+![Todo6](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/6.png)
+
+* Le bouton "Active" : Il permet de n'afficher que les todos non "cochées" :
+
+
+* Le bouton "Completed" : Il permet de n'afficher que les todos "cochées" :
+
+
+* Le bouton "All" : Il permet de d'afficher toutes les todos :
+
