@@ -61,4 +61,9 @@ Il existe deux manière de supprimer des todos :
 
 * Lors du passage de la souris sur une todo, une crois apparait à droite. En cliquant dessus vous supprimerez la todo en question :
 
+![Todo9](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/9.png)
 
+
+* Si au moins une todo est "cochée", cliquez sur le bouton "Clear completed" pour supprimer toutes les todo "cochées" : 
+
+![Todo10](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/10.png)
