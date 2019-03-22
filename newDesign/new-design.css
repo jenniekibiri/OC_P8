@@ -1,0 +1,130 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background:rgb(255, 255, 255);
+    color:#000;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 800px;
+}
+
+.todoapp{
+    box-shadow: none;
+    margin-left:10%;
+    margin-right:10%;
+    width: 80%;
+    background:transparent;
+}
+
+.todoapp h1{
+    text-align:left;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.new-todo{
+    background:none;
+    box-shadow: none;
+    margin: 50px 0;
+    padding:16px;
+    border-bottom: 3px solid #eee;
+    color:rgb(199, 20, 20);
+}
+
+.new-todo::placeholder{
+    color:rgb(143, 143, 143) !important;
+    font-style: normal !important;
+}
+
+.main{
+    border:none;
+}
+
+.toggle-all, .toggle-all + label{
+    display:none;
+}
+
+.todo-list li .toggle + label {
+    background-image: url(toggle.png);
+    background-size: 30px 30px;
+}
+
+
+.todo-list li .toggle:checked + label {
+	background-image: url(toggle_checked.png)
+}
+
+.todo-list li{
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.todo-list li:last-child{
+    margin-bottom: 100px;
+}*
+
+.todo-list li .toggle{
+    
+    cursor: pointer;
+}
+
+.todo-list li label{
+    font-weight: bold;
+}
+
+.todo-count{
+    position: absolute;
+    top:-20px;
+    left:10px;
+    color:#25AE88;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: capitalize;
+
+}
+
+.todo-count strong{
+    font-weight: bold;
+}
+
+.footer:before{
+    display:none;
+}
+
+.todo-list li.completed label{
+    color:#25AE88;
+}
+
+.filters{
+    display:flex;
+    align-content: space-around;
+    align-items: center;
+}
+
+.filters li a.selected{
+    border-color:rgba(37, 174, 136,0.5) !important;
+}
+
+footer{
+    display:none;
+}
+
+.nightMode{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top:20px;
+    right:20px;
+    background-image: url(moon.png);
+    background-size: 30px 30px;
+    cursor:pointer;
+}
+
+.nightMode.active{
+    background-image: url(sun.png);
+}

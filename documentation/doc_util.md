@@ -35,7 +35,7 @@ Plusieurs éléments sont apparus lors de l'ajout de la Todo :
 
 ![Todo5](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/5.png)
 
-* Lors de la complession de cette todo, celle-ci est barrée et un nouveau bouton "Clear completed" apparait. Il sert à supprimer d'un clique toutes les totos "cochées"
+* Lors de la complession de cette todo, celle-ci est barrée et un nouveau bouton "Clear completed" apparait. Il sert à supprimer d'un clique toutes les todos "cochées"
 
 ## Le filtre :
 
@@ -60,7 +60,7 @@ Pour comprendre comment il fonctionne nous allons créer 5 todos et en "cocher" 
 
 Il existe deux manière de supprimer des todos : 
 
-* Lors du passage de la souris sur une todo, une crois apparait à droite. En cliquant dessus vous supprimerez la todo en question :
+* Lors du passage de la souris sur une todo, une croix apparait à droite. En cliquant dessus vous supprimerez la todo en question :
 
 ![Todo9](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/9.png)
 

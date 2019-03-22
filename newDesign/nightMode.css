@@ -1,0 +1,24 @@
+body{
+    background:rgb(0, 0, 0);
+}
+
+.new-todo::placeholder{
+    color:white !important;
+}
+
+.todoapp h1{
+    color: rgb(255, 255, 255);
+}
+
+
+.todo-list li label{
+    color:white;
+}
+
+.filters{
+    color:white;
+}
+
+.clear-completed{
+    color:white;
+}
