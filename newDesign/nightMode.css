@@ -5,9 +5,16 @@ body{
 .new-todo::placeholder{
     color:white !important;
 }
+.new-todo{
+    color:white;
+}
 
 .todoapp h1{
     color: rgb(255, 255, 255);
+}
+
+.toggle-all + label:before{
+    color: #ffffff;
 }
 
 

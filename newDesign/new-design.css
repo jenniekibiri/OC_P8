@@ -31,9 +31,8 @@ body{
     background:none;
     box-shadow: none;
     margin: 50px 0;
-    padding:16px;
     border-bottom: 3px solid #eee;
-    color:rgb(199, 20, 20);
+    padding: 16px 16px 16px 50px;
 }
 
 .new-todo::placeholder{
@@ -45,14 +44,27 @@ body{
     border:none;
 }
 
-.toggle-all, .toggle-all + label{
-    display:none;
+.toggle-all + label{
+    top:-105px;
+    left:-25px;
 }
+
+.toggle-all + label:before{
+    color: #737373;
+}
+
+.toggle-all:checked + label:before{
+    color:#25AE88;
+}
+
+
 
 .todo-list li .toggle + label {
     background-image: url(toggle.png);
     background-size: 30px 30px;
 }
+
+
 
 
 .todo-list li .toggle:checked + label {

@@ -256,13 +256,16 @@
     Controller.prototype.toggleAll = function (completed) {
         console.log("%c Modification de la complession de toutes les taches", "color: #fc8b2a")
         var self = this;
+        
         self.model.read({
             completed: !completed
+            
         }, function (data) {
             data.forEach(function (item) {
                 self.toggleComplete(item.id, completed, true);
             });
         });
+
 
         self._filter();
     };
