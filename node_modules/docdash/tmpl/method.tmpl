@@ -12,6 +12,8 @@ var self = this;
         print('new (require("' + name.slice(7) + '"))');
       } else if(kind === 'class') {
         print('new ' + name);
+      } else if(kind === 'event' && data.alias) {
+        print(data.alias);
       } else {
         print(name);
       }

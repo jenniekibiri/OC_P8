@@ -1,3 +1,8 @@
+## Version 1.1.0
+
+* [scripts] remove jQuery as dependency
+* [feature] allow aliasing event names
+
 ## Version 1.0.3
 
 * [style] break headers into multiple lines

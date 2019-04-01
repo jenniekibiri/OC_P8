@@ -1,8 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "docdash": "^1.0.3",
-    "todomvc-app-css": "^2.0.1",
+    "docdash": "^1.1.0",
+    "todomvc-app-css": "^2.2.0",
     "todomvc-common": "^1.0.1"
   },
   "devDependencies": {
@@ -10,6 +10,8 @@
     "minami": "^1.2.3"
   },
   "script": {
-    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
+    "start": "node js/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

@@ -53,6 +53,7 @@ body{
     color: #737373;
 }
 
+
 .toggle-all:checked + label:before{
     color:#25AE88;
 }

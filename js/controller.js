@@ -192,11 +192,6 @@
             items = data;
         });
 
-        items.forEach(function (item) {
-            if (item.id === id) {
-                console.log("%c" + id + " a été supprimé", "color: #fc8b2a")
-            }
-        });
 
         self.model.remove(id, function () {
             self.view.render('removeItem', id);
