@@ -1,6 +1,6 @@
 # Audit de performance du site [todolistme](http://todolistme.net/)
 
-### 1. Langage utilisés par ce site : 
+### 1. Langages utilisés par ce site : 
 
 Grâce à l'utilisation de l'extension Wappalyzer sur Chrome, nous pouvons voir que le site utilise Jquery et Jquery UI qui sont deux librairies très gourmande.
 
@@ -62,7 +62,7 @@ Grâce à l'outil de performance nous pouvons voir ce qui à été chargé et à
 
 Nous pouvons surtout voir que au bout de 2 secondes rien n'est encore chargé
 
-Et surtout qu'il faudra attendre la 10ème secondes du test pour voir enfin les todos
+Et surtout qu'il faudra attendre la 10ème seconde du test pour voir enfin les todos
 
 #### Outil "Coverage" :
 
@@ -84,7 +84,7 @@ Voici les quelques fonctionnalités qui pourraient être ajoutées à notre site
 * Le fait de pouvoir reporter une todo 
 * Le téléchargement de la todo-list
 
-### Comparaison : 
+### 5. Comparaison : 
 
 ![Application](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/my.png)
 
@@ -93,7 +93,7 @@ Voici les quelques fonctionnalités qui pourraient être ajoutées à notre site
 | Notre site | 99%         | 69%           | 86%            | 67% |
 | Concurrent | 54%         | 47%           | 71%            | 78% |
 
-On peut voir que l'on est au dessus partout sauf pour le SOE ce qui est un très bon résultat 
+On peut voir que l'on est au dessus partout sauf pour le SEO ce qui est un très bon résultat 
 
 
 
