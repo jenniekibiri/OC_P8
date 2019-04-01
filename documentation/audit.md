@@ -64,8 +64,36 @@ Nous pouvons surtout voir que au bout de 2 secondes rien n'est encore chargé
 
 Et surtout qu'il faudra attendre la 10ème secondes du test pour voir enfin les todos
 
+#### Outil "Coverage" :
 
+![Coverage1](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/c1.png)
 
+Grâce à l'outil "coverage" nous pouvons savoir combien de pourcentage d'un fichier n'est pas utilisé.
+
+Donc comme on peut voir sur la photo, 86% de Jquery UI n'est pas utilisé, ce qui est énorme.
+
+Et pour Jquery c'est 60%.
+
+Ainsi que leur service de pub qui n'est utilisé qu'à 32%
+
+### 4. "Scaling" : 
+
+Voici les quelques fonctionnalités qui pourraient être ajoutées à notre site : 
+
+* Les "lists" (classeurs)
+* Le fait de pouvoir reporter une todo 
+* Le téléchargement de la todo-list
+
+### Comparaison : 
+
+![Application](https://raw.githubusercontent.com/thomasv04/OC_P8/master/documentation/img/my.png)
+
+|            | Performance | Accessibility | Best Practices | SEO |
+|------------|-------------|---------------|----------------|-----|
+| Notre site | 99%         | 69%           | 86%            | 67% |
+| Concurrent | 54%         | 47%           | 71%            | 78% |
+
+On peut voir que l'on est au dessus partout sauf pour le SOE ce qui est un très bon résultat 
 
 
 
