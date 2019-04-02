@@ -8,7 +8,7 @@ L'amélioration de ce projet se décompose en 4 étapes :
 
 * La recherche de deux bugs
 * La réalisation de tests Jasmine
-* L'optimisation des performance 
+* L'optimisation des performances 
 * La réalisation d'une documentation 
 
 ## 1. Correction des bugs 
