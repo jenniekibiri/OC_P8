@@ -15,8 +15,6 @@
         this._dbName = name;
 
         if (!localStorage[name]) {
-            console.log("LocalStorage n'existe pas")
-            console.log("Création d'un nouveau LocalStorage")
             var data = {
                 todos: []
             };
@@ -43,7 +41,6 @@
     Store.prototype.find = function (query, callback) {
 
         if (!callback) {
-            console.log("&#9888; Callback non renseigné !")
             return;
         }
 
@@ -65,7 +62,6 @@
      * @param {function} callback The callback to fire upon retrieving data
      */
     Store.prototype.findAll = function (callback) {
-        //console.log("Récuperation de toutes les données du localStorage")
         callback = callback || function () {};
         callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
     };
@@ -80,40 +76,19 @@
      */
     Store.prototype.save = function (updateData, callback, id) {
         if (updateData.completed === true) {
-            console.log(id + " est maintenant complété");
         } else if (updateData.title != undefined) {
 
-            console.log("Sauvegarde de '" + updateData.title + "' dans le localStorage")
         }
         var data = JSON.parse(localStorage[this._dbName]);
         var todos = data.todos;
 
         callback = callback || function () {};
 
-        if (!id) {
-            var newId = "";
-            var charset = "0123456789";
-            console.log("Génération de l'ID");
-            for (var i = 0; i < 6; i++) {
-
-                newId += charset.charAt(Math.floor(Math.random() * charset.length));
-
-            }
-            console.log("L'ID généré est " + newId)
-            // Generate an ID
-
-        }
-
-
-
         // If an ID was actually given, find the item and update each property
         if (id) {
-            console.log("Recherche si " + id + " existe déjà, si oui, mise à jour de celui-ci");
             for (var i = 0; i < todos.length; i++) {
                 if (todos[i].id === id) {
-                    console.log(id + " existe déjà dans le localStorage")
                     for (var key in updateData) {
-                        console.log("Mise à jour de " + id + " dans le localStorage")
                         todos[i][key] = updateData[key];
                     }
                     break;
@@ -125,7 +100,7 @@
         } else {
 
             // Assign an ID
-            updateData.id = parseInt(newId);
+            updateData.id = Date.now();
 
 
             todos.push(updateData);
@@ -141,7 +116,6 @@
      * @param {function} callback The callback to fire after saving
      */
     Store.prototype.remove = function (id, callback) {
-        console.log("Suppression de l'élément " + id);
         var data = JSON.parse(localStorage[this._dbName]);
         var todos = data.todos;
         var todoId;
@@ -168,7 +142,6 @@
      * @param {function} callback The callback to fire after dropping the data
      */
     Store.prototype.drop = function (callback) {
-        console.log("Clear LocalStorage")
         var data = {
             todos: []
         };

@@ -56,7 +56,6 @@
         var page = route || '';
         this._updateFilterState(page);
 
-        console.log("%c Génération et initialisation de la todoList", "color: #fc8b2a")
     };
 
     /**
@@ -68,7 +67,6 @@
         self.model.read(function (data) {
             self.view.render('showEntries', data);
         });
-        console.log("%c Affichage de toutes les données", "color: #fc8b2a")
     };
 
     /**
@@ -81,7 +79,6 @@
         }, function (data) {
             self.view.render('showEntries', data);
         });
-        console.log("%c Affichage des données 'actives'", "color: #fc8b2a")
     };
 
     /**
@@ -95,7 +92,6 @@
             self.view.render('showEntries', data);
         });
 
-        console.log("%c Affichage des données 'complétées'", "color: #fc8b2a")
     };
 
     /**
@@ -114,7 +110,6 @@
             self._filter(true);
         });
 
-        console.log("%c Ajout d'une tache", "color: #fc8b2a")
     };
 
     /*
@@ -129,7 +124,6 @@
             });
         });
 
-        console.log("%c Edition d'une tache", "color: #fc8b2a")
     };
 
     /*
@@ -147,7 +141,6 @@
         }
 
         if (title.length !== 0) {
-            console.log("%c Sauvegarde de l'édition", "color: #fc8b2a")
             self.model.update(id, {
                 title: title
             }, function () {
@@ -157,7 +150,6 @@
                 });
             });
         } else {
-            console.log("%c Suppression de la tache car vide", "color: #fc8b2a")
             self.removeItem(id);
         }
 
@@ -168,7 +160,6 @@
      * Cancels the item editing mode.
      */
     Controller.prototype.editItemCancel = function (id) {
-        console.log("%c Annulation de l'édition", "color: #fc8b2a")
         var self = this;
         self.model.read(id, function (data) {
             self.view.render('editItemDone', {
@@ -204,7 +195,6 @@
      * Will remove all completed items from the DOM and storage.
      */
     Controller.prototype.removeCompletedItems = function () {
-        console.log("%c Suppression de toutes les taches complétées", "color: #fc8b2a")
 
         var self = this;
         self.model.read({
@@ -228,7 +218,6 @@
      * @param {boolean|undefined} silent Prevent re-filtering the todo items
      */
     Controller.prototype.toggleComplete = function (id, completed, silent) {
-        console.log("%c Modification de la complession", "color: #fc8b2a")
         var self = this;
         self.model.update(id, {
             completed: completed
@@ -249,7 +238,6 @@
      * Just pass in the event object.
      */
     Controller.prototype.toggleAll = function (completed) {
-        console.log("%c Modification de la complession de toutes les taches", "color: #fc8b2a")
         var self = this;
         
         self.model.read({
@@ -270,7 +258,6 @@
      * number of todos.
      */
     Controller.prototype._updateCount = function () {
-        console.log("%c Modification du compteur", "color: #fc8b2a")
         var self = this;
         self.model.getCount(function (todos) {
             self.view.render('updateElementCount', todos.active);
@@ -293,7 +280,6 @@
      * @param {boolean|undefined} force  forces a re-painting of todo items.
      */
     Controller.prototype._filter = function (force) {
-        console.log("%c Filtrage", "color: #fc8b2a")
         var activeRoute = this._activeRoute.charAt(0).toUpperCase() + this._activeRoute.substr(1);
 
         // Update the elements on the page, which change with each completed todo
@@ -313,7 +299,6 @@
      * Simply updates the filter nav's selected states
      */
     Controller.prototype._updateFilterState = function (currentPage) {
-        console.log("%c Mise à jour du filtre", "color: #fc8b2a")
         // Store a reference to the active route, allowing us to re-filter todo
         // items as they are marked complete or incomplete.
         this._activeRoute = currentPage;

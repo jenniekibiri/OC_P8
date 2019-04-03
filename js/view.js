@@ -28,8 +28,6 @@
 
     View.prototype._removeItem = function (id) {
         var elem = qs('[data-id="' + id + '"]');
-
-        console.log("%c Suppression de [data-id=" + id + "]", "color: #9b2afc");
         if (elem) {
             this.$todoList.removeChild(elem);
         }
@@ -59,7 +57,6 @@
     };
 
     View.prototype._editItem = function (id, title) {
-        console.log("%c Modification de [data-id=" + id + "]", "color: #9b2afc");
 
         var listItem = qs('[data-id="' + id + '"]');
 
@@ -92,7 +89,6 @@
         listItem.className = listItem.className.replace('editing', '');
 
         qsa('label', listItem).forEach(function (label) {
-            console.log("%c" + label.textContent + " modifié en " + title, "color: #9b2afc");
 
 
 
